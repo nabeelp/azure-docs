@@ -23,7 +23,7 @@ Azure Event Grid has three types of authentication:
 
 Webhooks are one of many ways to receive events in real time from Azure Event Grid.
 
-Every time there is a new event ready to be delivered, Event Grid sends an HTTP request with to your WebHook with the event in the body.
+Every time there is a new event ready to be delivered, Event Grid sends an HTTP request to your WebHook with the event in the body.
 
 When you register your own WebHook endpoint with Event Grid, it sends you a POST request with a simple validation code in order to prove endpoint ownership. Your app needs to respond by echoing back the validation code. Event Grid will not deliver events to WebHook endpoints that have not passed the validation.
  
@@ -59,7 +59,7 @@ For example, to subscribe to a custom topic named **mytopic**, you need the Micr
 
 ## Topic publishing
 
-Topics use either Shared Access Signature (SAS) or key authentication. We recommend SAS, but key authentication provides simple programming, and is compatible with many existing webhook publishers. 
+Topics use either Shared Access Signature (SAS) or key authentication. We recommend SAS, but key authentication provides a simpler programming model, and is compatible with many existing webhook publishers. 
 
 You include the authentication value in the HTTP header. For SAS, use **aeg-sas-token** for the header value. For key authentication, use **aeg-sas-key** for the header value.
 
